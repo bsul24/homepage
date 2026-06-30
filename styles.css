@@ -200,3 +200,57 @@ main h2 {
 .project-link {
   width: 20px;
 }
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+footer .content-wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 60px;
+}
+
+footer img {
+  max-width: 600px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-info h3 {
+  font-family: var(--header-font);
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.contact-info p {
+  font-size: 14px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  width: 20px;
+  fill: white;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social-links img {
+  width: 22px;
+}
