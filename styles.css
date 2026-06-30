@@ -254,3 +254,51 @@ footer img {
 .footer-social-links img {
   width: 22px;
 }
+
+@media (max-width: 900px) {
+  header .content-wrapper {
+    display: flow-root;
+  }
+
+  .img-card {
+    float: left;
+    max-width: 320px;
+    margin: 0 24px 16px 0;
+    position: relative;
+    overflow: visible;
+  }
+
+  .img-card p {
+    left: auto;
+    right: -220px;
+    top: 40px;
+    bottom: auto;
+    width: max-content;
+    text-align: left;
+  }
+
+  .about-me {
+    display: block;
+    max-width: 100%;
+    margin: 120px 40px 0;
+    padding: 80px 30px 30px;
+  }
+
+  .about-me h2 {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-self: flex-end;
+  }
+
+  main .content-wrapper {
+    grid-template-columns: repeat(2, minmax(150px, 350px));
+    padding-bottom: 140px;
+  }
+
+  footer img {
+    max-width: 300px;
+    object-fit: cover;
+  }
+}
