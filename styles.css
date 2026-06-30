@@ -8,10 +8,46 @@
   --primary-color: oklch(60.9% 0.126 221.723);
   --header-font: "Playfair Display", serif;
   --text-font: "Roboto", sans-serif;
+  --project-color-1: oklch(44.4% 0.177 26.899);
+  --project-color-2: oklch(70.2% 0.183 293.541);
+  --project-color-3: oklch(53.2% 0.157 131.589);
+  --project-color-4: oklch(74% 0.238 322.16);
+  --project-color-5: oklch(75% 0.183 55.934);
+  --project-color-6: oklch(68.5% 0.169 237.323);
+}
+
+/* Project colors */
+
+.one {
+  background-color: var(--project-color-1);
+}
+
+.two {
+  background-color: var(--project-color-2);
+}
+
+.three {
+  background-color: var(--project-color-3);
+}
+
+.four {
+  background-color: var(--project-color-4);
+}
+
+.five {
+  background-color: var(--project-color-5);
+}
+
+.six {
+  background-color: var(--project-color-6);
 }
 
 body {
   font-family: var(--text-font);
+}
+
+.content-wrapper {
+  padding: 0 40px;
 }
 
 img {
@@ -21,10 +57,13 @@ img {
 }
 
 header {
+  background-color: var(--primary-color);
+  padding: 30px 0;
+}
+
+header .content-wrapper {
   display: flex;
   justify-content: center;
-  background-color: var(--primary-color);
-  padding: 30px 40px;
 }
 
 .serif {
@@ -83,4 +122,81 @@ header {
 .social-links img {
   width: 20px;
   cursor: pointer;
+}
+
+main {
+  padding: 50px 0;
+}
+
+main .content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 350px));
+  gap: 30px;
+  justify-content: center;
+}
+
+main h2 {
+  grid-column: 1 / -1;
+  margin-bottom: -15px;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.16);
+}
+
+.project-img {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: var(--header-font);
+  font-size: 36px;
+  text-align: center;
+  padding: 20px;
+}
+
+.project-card h3 {
+  font-family: var(--header-font);
+}
+
+.project-card p {
+  font-size: 14px;
+  color: oklch(37.3% 0.034 259.733);
+}
+
+.project-details {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-name-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-link {
+  width: 20px;
 }
