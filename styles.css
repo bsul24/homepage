@@ -57,13 +57,26 @@ img {
 }
 
 header {
-  background-color: var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  background-color: white;
   padding: 30px 0;
 }
 
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--primary-color);
+  clip-path: polygon(0 0, 100% 0, 100% 68%, 0 86%);
+  z-index: 0;
+}
+
 header .content-wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
 
 .serif {
@@ -73,6 +86,7 @@ header .content-wrapper {
 .img-card {
   position: relative;
   max-width: 400px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.35);
 }
 
 .img-card::after {
@@ -102,6 +116,7 @@ header .content-wrapper {
   background-color: white;
   margin: 30px 0;
   padding: 30px 15px 20px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
 }
 
 .about-me h2 {
@@ -300,5 +315,87 @@ footer img {
   footer img {
     max-width: 300px;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  header .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  header::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100px, 0 300px);
+  }
+
+  .img-card {
+    float: none;
+    position: relative;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .img-card p {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: auto;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    z-index: 1;
+  }
+
+  .about-me {
+    margin-top: 30px;
+    padding: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .about-me h2 {
+    margin-bottom: 15px;
+  }
+
+  .social-links {
+    justify-self: center;
+    margin-top: 30px;
+  }
+
+  main .content-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 30px 10px 60px;
+  }
+
+  main h2 {
+    text-align: center;
+  }
+
+  footer .content-wrapper {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  footer .contact-info {
+    padding: 20px 10px 50px;
+  }
+
+  footer h3 {
+    align-self: center;
+  }
+
+  .footer-img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .footer-social-links {
+    align-self: center;
   }
 }
